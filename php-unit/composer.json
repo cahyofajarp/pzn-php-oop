@@ -1,0 +1,32 @@
+{
+    "name": "fajar/php-unit-test",
+    "description": "Belajar Unit Test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Cahyo Fajar Pamungkas",
+            "email": "cahyofajar28@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">= 7.4"
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "9.5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "FajarTest\\Test\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FajarTest\\Test\\" : "tests"
+        }
+    },
+    "scripts": {
+        "test" : "phpunit --configuration phpunit.xml",
+        "test:product" : "phpunit --configuration phpunit.xml --testsuite product",
+        "test:counter" : "phpunit --configuration phpunit.xml --testsuite counter"
+    }
+}
